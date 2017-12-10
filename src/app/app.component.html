@@ -10,28 +10,7 @@
     <app-add-user-form></app-add-user-form>
   </div>
   <div class="col">
-    <table class="table" style="margin-top:24px">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Gender</th>
-          <th>Date of birth</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of userService.getUsers()">
-          <td>{{ user.id }}</td>
-          <td>{{ user.firstName }}</td>
-          <td>{{ user.lastName }}</td>
-          <td>{{ user.gender }}</td>
-          <td>{{ user.dOb }}</td>
-          <td (click)="removeUser()">Remove {{ user.id }}</td>
-        </tr>
-      </tbody>
-    </table>
+<app-table-of-users></app-table-of-users>
   </div>
   </div>
 </div>

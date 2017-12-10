@@ -8,25 +8,13 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
-  private user: User;
-  private visibleTable: boolean = false;
   
   title = 'Table Project';
 
   constructor(private userService: UserService) {
-    if(this.userService.getUsers().length > 0){
-      this.visibleTable = true;
-    } else {
-      this.visibleTable = false;
-    }
   } 
 
   ngOnInit() {
-  }
-
-  private removeUser(): void {
-    this.userService.removeUserko(this.user);
   }
 
 }

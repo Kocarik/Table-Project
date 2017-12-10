@@ -10,7 +10,7 @@ export class UserService {
     let users = this.getUsers();
 
     if(users.length == 0) {
-      this.nextId = 0;
+      this.nextId = 1;
     } else {
       let maxId = users[users.length - 1].id;
       this.nextId = maxId + 1;
