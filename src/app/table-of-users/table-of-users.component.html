@@ -1,4 +1,9 @@
-<table class="table" style="margin-top:24px">
+<h1>Table of users</h1>
+<hr>
+<div class="alert alert-success" role="alert" *ngIf="userService.getUsers().length == 0">
+    {{pleaseAddUser}}
+</div>
+<table class="table" *ngIf="userService.getUsers().length > 0">
     <thead>
       <tr>
         <th>#</th>

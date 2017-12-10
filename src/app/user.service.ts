@@ -38,7 +38,7 @@ export class UserService {
     this.setUsersToLocalStorage(users);
    }
 
-   public removeUserko(user: User){
+   public removeOneUser(user: User){
     let users = this.getUsers();
     users.splice(users.indexOf(user), 1);
     this.setUsersToLocalStorage(users);

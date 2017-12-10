@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   
   title = 'Table Project';
 
-  constructor(private userService: UserService) {
+  constructor() {
   } 
 
   ngOnInit() {

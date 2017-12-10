@@ -23,8 +23,12 @@ export class AddUserFormComponent implements OnInit {
     this.userService.addUser(this.firstName, this.lastName, this.gender, this.dOb);
   }
 
-  private removeAllUsers(): void {
-    this.userService.removeAllUsers();
+  private removeAllUsers() {
+    if(confirm("Do you want really Remove all users?")){
+      this.userService.removeAllUsers();
+    } else {
+      console.log("No!");
+    }
   }
 
 }

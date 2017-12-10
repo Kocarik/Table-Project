@@ -10,21 +10,17 @@ import { UserService } from '../user.service';
 export class TableOfUsersComponent implements OnInit {
 
   private user: User;
-  private visibleTable: boolean = false;
+  private users: User[] = this.userService.getUsers();
+  private pleaseAddUser = 'Please add the user using the form on the left!';
 
   constructor(private userService: UserService) {
-    if(this.userService.getUsers().length > 0){
-      this.visibleTable = true;
-    } else {
-      this.visibleTable = false;
-    }
   } 
 
   ngOnInit() {
   }
 
   private removeUser(): void {
-    this.userService.removeUserko(this.user);
+    this.userService.removeOneUser(this.user);
   }
 
 }
