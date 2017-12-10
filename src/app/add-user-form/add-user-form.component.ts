@@ -13,7 +13,6 @@ export class AddUserFormComponent implements OnInit {
   private gender: string;
   private dOb: number;
 
-
   constructor(private userService: UserService) { 
   }
 

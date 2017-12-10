@@ -15,12 +15,12 @@ export class AppComponent implements OnInit {
   title = 'Table Project';
 
   constructor(private userService: UserService) {
-    if(userService.getUsers().length > 0){
+    if(this.userService.getUsers().length > 0){
       this.visibleTable = true;
     } else {
       this.visibleTable = false;
     }
-   } 
+  } 
 
   ngOnInit() {
   }

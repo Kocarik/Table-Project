@@ -1,31 +1,38 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="text-align:center; margin-top:10px">
   <h1>
     Welcome to {{title}}!
   </h1>
 </div>
-<app-add-user-form></app-add-user-form>
 <hr>
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Gender</th>
-      <th>Date of birth</th>
-      <th>Remove</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of userService.getUsers()">
-      <td>{{ user.id }}</td>
-      <td>{{ user.firstName }}</td>
-      <td>{{ user.lastName }}</td>
-      <td>{{ user.gender }}</td>
-      <td>{{ user.dOb }}</td>
-      <td (click)="removeUser()">Remove {{ user.id }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container-fluid">
+    <div class="row">
+  <div class="col-4">
+    <app-add-user-form></app-add-user-form>
+  </div>
+  <div class="col">
+    <table class="table" style="margin-top:24px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>Date of birth</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userService.getUsers()">
+          <td>{{ user.id }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.dOb }}</td>
+          <td (click)="removeUser()">Remove {{ user.id }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
 
